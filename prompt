@@ -1,0 +1,25 @@
+Bạn là Senior UI/UX Designer, bắt đầu build một landing page porfolio cho cá nhân tôi. Code UI phải sạch, tối giản. 
+
+Luôn tuân thủ 100% các Rules trong file UI_RULES.md. 
+
+Dùng các skills, script, và các data từ folder agent, scripts để tối ưu UI, UX. 
+
+Code các màn hình/section/component đầu tiên.
+
+Các chức năng cần có: 
++ Langguage toggle. (vietnamese, english)
++ Light moe toggle. 
+
+Các phần cần có trong porfolio: 
++ basic information.
++ About me
++ Top skills
++ experience
++ Projects
++ reviews
++ Contact
++ Education
++ Certificate
++ interest, strength
+
+Các thông tin cần để dạng placecholder, tôi sẽ fill thông tin vào sau.

@@ -1,0 +1,46 @@
+Đây là các trang web có UI/UX tôi ấn tượng, hãy phân tích và đưa ra bộ quy tắc phúc khảo Palette, Spacing, Border radius, Font, Icons, v.v. (Note theo cú pháp Tailwind nếu sử dụng). 
+Mục tiêu là: Tạo ra một bản phác thảo Rules về sự đồng bộ (cohesion) cho toàn bộ web app.
+Lưu các quy tắc đó vào file  UI_RULES.md
+
+------------------
+Style UI chủ đạo: 
+- https://www.hiveart.xyz/rexon/rexon/blog-grid.html (main preference)
++ Học cách thiết kế background cho giao diện. 
++ Cách phối màu hài hòa, nổi bât, cá tính, trẻ trung cho giao diện mode tối. Tôi chính cách phối màu, các màu chủ đạo và cách sắp xếp bố trí layout của web này cần đc bỏ vào web của tôi.
++ Font chữ trẻ trung, hiện đại. 
++ Học style thiết kế của wewb này. Trong rất hiện đại, chuyên nghiệp, trẻ trung.
++ học hiệu ứng scroll up từ trang wewb này, thấy nó khá hay.
++ Học cách movtion, movement mà các element xuất hiện rất mượt. 
++ Học cách làm hiệu ứng và UX, UI phần My Professional Skills & Experience, My Best Skills
+
+- https://ui-ux-pro-max-skill.nextlevelbuilder.io/demo/educational-platform
++ Học cách border radius cho các element. 
++ Học cách phối màu, cho trẻ trung, năng động cho giao diện khi giao diện là mode sáng.
+- https://devsync.framer.website/
++ Màu chủ đạo của web này cũng là màu tôi thích.
++ Học các hiệu ứng của chuột khi hover vào các vị trí khác nhau trên trang web.
++ Học các hiệu ứng khi click chuột vào các vị trí khác nhau trên trang web.
++ Học cách làm mơ ở phía background để tăng độ đẹp và chuyên nghiệp cho trang web.
+
+Hiệu ứng, motion, hover: 
+- https://jayden-portfolio.framer.website/
++ Học cách làm hiệu ứng của con chuột khi vuốt ở trang web. 
++ Học cách thiết kế sidebar của web này. 
++ Học hiệu ứng element ở dưới khi vuốt lên thì overlay từ dưới của element trước lên trong rất thoải mái và chuyên nghiệp.
++ Học các hiệu ứng khi click chuột, hover chuột. 
++ Học các animation của các element, button khi hover chuột hoặc click chuột
++ Học cách làm cho các brand, app chạy trên thanh ngang. 
++ Học cách thiết kế UX phần Pricing.
+
+- https://alexportz.framer.website/
++ Học hiệu ứng element ở dưới khi vuốt lên thì overlay từ dưới của element trước lên trong rất thoải mái và chuyên nghiệp.
++ Học hiệu ứng khi cách element dạng ảnh xuất hiện. 
++ Học các hiệu ứng khi click chuột, hover chuột. 
++ Học các animation của các element, button khi hover chuột hoặc click chuột
++ Học cách làm phần FAQS
+
+- https://ex-coders.com/html/minifolio/index.html
++ Học hiệu ứng loading trang của trang web này. 
++ Học hiệu ứng khi cách element dạng ảnh xuất hiện. 
++ Học các hiệu ứng khi click chuột, hover chuột. 
++ Học các animation của các element, button khi hover chuột hoặc click chuột

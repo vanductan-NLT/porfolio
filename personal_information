@@ -1,0 +1,57 @@
+# THÔNG TIN CÁ NHÂN (PERSONAL INFORMATION)
+# Hãy điền thông tin của bạn vào các mục bên dưới. 
+# Bạn có thể để trống những mục không muốn hiển thị.
+
+[BASIC_INFO]
+Full_Name: Văn Đức Tân
+Current_Job_Title: 
+Tagline (Câu slogan ngắn gọn): 
+Location (Thành phố/Quốc gia): Việt Nam
+
+[CONTACT]
+Email: vanductan.nlt@gmail.com
+Phone: 0926236105
+Facebook_URL: https://www.facebook.com/tan7tntmt
+LinkedIn_URL: https://www.linkedin.com/in/v%C4%83n-%C4%91%E1%BB%A9c-t%C3%A2n-963298276/
+GitHub_URL: https://github.com/vanductan-NLT
+Website_URL: https://vanductan.id.vn/
+
+[ABOUT_ME]
+# Giới thiệu ngắn gọn về bản thân, đam mê, và mục tiêu nghề nghiệp.
+Description: 
+
+[SKILLS]
+# Liệt kê các kỹ năng chính (ví dụ: JavaScript, React, Python, Project Management, etc.)
+Technical_Skills: Automation, Web Development, Project Management, Computer Science.
+Soft_Skills: 
+Languages: Vietnamese (native), English (can communicate)
+
+[EXPERIENCE]
+# Sao chép block bên dưới cho mỗi công việc
+- Company: 
+  Role: 
+  Duration (e.g., Jan 2020 - Present): 
+  Description: 
+
+[PROJECTS]
+# Sao chép block bên dưới cho mỗi dự án
+- Project_Name: 
+  Role: 
+  Tech_Stack: 
+  Link (Demo/Repo): 
+  Description: 
+
+[EDUCATION]
+- School/University: 
+  Degree/Major: 
+  Graduation_Year: 
+
+[CERTIFICATIONS]
+# Các chứng chỉ nếu có
+- Name: 
+  Issuer: 
+  Year: 
+
+[INTERESTS]
+# Sở thích cá nhân
+List: 
