@@ -8,7 +8,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
 
 const outfit = Outfit({
-    subsets: ["latin", "vietnamese"],
+    subsets: ["latin"],
     variable: "--font-outfit",
     display: "swap",
 });
