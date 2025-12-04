@@ -126,23 +126,31 @@ This document serves as the **absolute source of truth** for the design system. 
 - **Error:** `#FF5555`
 - **Success:** `#7AF298`
 
+**Light Mode (High Contrast)**
+- **Background:** `#FFFFFF` (Pure White)
+- **Surface:** `#F8F9FA` (Light Gray)
+- **Surface Highlight:** `#E9ECEF`
+- **Text Primary:** `#0F172A` (Dark Slate)
+- **Text Secondary:** `#334155` (Darker Gray for legibility)
+- **Border:** `#CBD5E1` (Mid-tone Gray for visibility)
+
 **Tailwind Config:**
 ```js
 colors: {
-  background: "#111111",
+  background: "#111111", // or #FFFFFF
   surface: {
-    DEFAULT: "#1A1A1A",
-    highlight: "#222222",
+    DEFAULT: "#1A1A1A", // or #F8F9FA
+    highlight: "#222222", // or #E9ECEF
   },
   primary: {
     DEFAULT: "#7AF298", // Neon Mint
     foreground: "#000000",
   },
   text: {
-    primary: "#FFFFFF",
-    secondary: "#B5B5B5",
+    primary: "#FFFFFF", // or #0F172A
+    secondary: "#B5B5B5", // or #334155
   },
-  border: "#333333",
+  border: "#333333", // or #CBD5E1
 }
 ```
 
@@ -154,16 +162,23 @@ colors: {
 - **Duration:** `300ms` (Standard), `500ms` (Large transitions).
 
 ### Specific Animations
-1.  **Staggered Reveal:**
-    - Items appear one by one with `100ms` delay.
-    - Start: `opacity: 0`, `y: 40px`.
-    - End: `opacity: 1`, `y: 0`.
-2.  **Curtain Reveal (Loading):**
-    - Overlay slides up (`y: -100%`).
-    - Content scales down (`scale: 1.1` -> `1.0`).
-3.  **Hover Lift:**
-    - `transform: translateY(-8px)`.
-    - `transition: all 0.3s ease-out`.
+1.  **Spotlight Effect (Flashlight):**
+    - **Usage:** Cards in About, Skills, Projects.
+    - **Behavior:** Radial gradient follows mouse cursor.
+    - **Style:** `radial-gradient(600px circle at x y, rgba(122,242,152,0.15), transparent 40%)`.
+2.  **Custom Cursor:**
+    - **Style:** Dot (Primary Color) + Trailing Ring.
+    - **Interaction:** Scales up (`1.5x`) on hoverable elements (Buttons, Links).
+3.  **Floating Sidebar (Navigation Rail):**
+    - **Position:** Fixed Left (Desktop), Hamburger (Mobile).
+    - **Style:** Glassmorphism Pill (`backdrop-blur-xl`).
+    - **Interaction:** Icons only, Tooltips on hover.
+4.  **Marquee:**
+    - **Usage:** Brand/Tech stack display.
+    - **Behavior:** Infinite horizontal scroll, pauses on hover.
+5.  **Click Feedback:**
+    - **Buttons:** `active:scale-95`.
+    - **Cards:** `whileTap={{ scale: 0.98 }}`.
 
 ---
 

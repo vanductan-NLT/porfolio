@@ -4,9 +4,10 @@
 
 [BASIC_INFO]
 Full_Name: Văn Đức Tân
-Current_Job_Title: 
-Tagline (Câu slogan ngắn gọn): 
-Location (Thành phố/Quốc gia): Việt Nam
+Current_Job_Title: Senior UI/UX Designer
+Tagline (Câu slogan ngắn gọn): Crafting digital experiences with passion and precision.
+Location (Thành phố/Quốc gia): Vietnam
+Availability: Open for work / Freelance
 
 [CONTACT]
 Email: vanductan.nlt@gmail.com
@@ -15,43 +16,81 @@ Facebook_URL: https://www.facebook.com/tan7tntmt
 LinkedIn_URL: https://www.linkedin.com/in/v%C4%83n-%C4%91%E1%BB%A9c-t%C3%A2n-963298276/
 GitHub_URL: https://github.com/vanductan-NLT
 Website_URL: https://vanductan.id.vn/
+Twitter_URL: 
+Instagram_URL: 
 
 [ABOUT_ME]
 # Giới thiệu ngắn gọn về bản thân, đam mê, và mục tiêu nghề nghiệp.
-Description: 
+Description: I am a passionate UI/UX Designer with over 5 years of experience in creating user-centric digital products. I specialize in translating complex requirements into intuitive and visually appealing designs. My goal is to bridge the gap between user needs and business goals through thoughtful design solutions.
+
+[STATS]
+# Các con số ấn tượng hiển thị ở phần About (Spotlight Cards)
+Years_Experience: 5+
+Projects_Completed: 50+
+Happy_Clients: 30+
+Awards_Won: 
 
 [SKILLS]
-# Liệt kê các kỹ năng chính (ví dụ: JavaScript, React, Python, Project Management, etc.)
-Technical_Skills: Automation, Web Development, Project Management, Computer Science.
-Soft_Skills: 
-Languages: Vietnamese (native), English (can communicate)
+# Liệt kê các kỹ năng chính
+Technical_Skills: Figma, Adobe XD, Photoshop, Illustrator, HTML/CSS, React, Tailwind CSS
+Soft_Skills: Leadership, Communication, Problem Solving, Time Management, Teamwork
+Languages: Vietnamese (Native), English (Professional Working Proficiency)
 
 [EXPERIENCE]
 # Sao chép block bên dưới cho mỗi công việc
-- Company: 
-  Role: 
-  Duration (e.g., Jan 2020 - Present): 
-  Description: 
+- Company: Tech Solutions Inc.
+  Role: Senior UI/UX Designer
+  Duration: Jan 2022 - Present
+  Description: Leading the design team in creating enterprise-level applications. improved user engagement by 40% through UX optimizations.
+
+- Company: Creative Agency
+  Role: UI/UX Designer
+  Duration: Jun 2019 - Dec 2021
+  Description: Designed websites and mobile apps for various clients across fintech and e-commerce sectors.
 
 [PROJECTS]
 # Sao chép block bên dưới cho mỗi dự án
-- Project_Name: 
-  Role: 
-  Tech_Stack: 
-  Link (Demo/Repo): 
-  Description: 
+- Project_Name: E-commerce Dashboard
+  Category: Web App
+  Role: Lead Designer
+  Tech_Stack: Figma, React, Tailwind
+  Link_Demo: https://demo-link.com
+  Link_Repo: https://github.com/repo
+  Description: A comprehensive dashboard for managing online stores, featuring real-time analytics and inventory management.
+  Tags: UI/UX, Dashboard, SaaS
+
+- Project_Name: Travel Booking App
+  Category: Mobile App
+  Role: UI Designer
+  Tech_Stack: Figma, Flutter
+  Link_Demo: 
+  Link_Repo: 
+  Description: A user-friendly mobile application for booking flights and hotels with a focus on visual storytelling.
+  Tags: Mobile, Travel, App
+
+[REVIEWS]
+# Đánh giá từ khách hàng hoặc đồng nghiệp
+- Name: John Doe
+  Role: CEO at TechCorp
+  Content: "Tan is an exceptional designer who truly understands user needs. His work significantly improved our product's usability."
+  Avatar_URL: 
+
+- Name: Jane Smith
+  Role: Product Manager
+  Content: "Working with Tan was a pleasure. He delivers high-quality designs on time and is always open to feedback."
+  Avatar_URL: 
 
 [EDUCATION]
-- School/University: 
-  Degree/Major: 
-  Graduation_Year: 
+- School/University: University of Technology
+  Degree/Major: Bachelor of Science in Computer Science
+  Graduation_Year: 2019
 
 [CERTIFICATIONS]
 # Các chứng chỉ nếu có
-- Name: 
-  Issuer: 
-  Year: 
+- Name: Google UX Design Professional Certificate
+  Issuer: Coursera
+  Year: 2021
 
 [INTERESTS]
 # Sở thích cá nhân
-List: 
+List: Photography, Traveling, Gaming, Reading Tech Blogs
