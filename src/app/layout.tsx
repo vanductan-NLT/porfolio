@@ -1,21 +1,26 @@
 import type { Metadata } from "next";
 import { Outfit, Manrope, JetBrains_Mono } from "next/font/google";
+import SmoothScroll from "@/components/SmoothScroll";
+import ScrollToTop from "@/components/ScrollToTop";
+import BackgroundBlobs from "@/components/BackgroundBlobs";
+import CustomCursor from "@/components/CustomCursor";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
 
 const outfit = Outfit({
-    subsets: ["latin"],
+    subsets: ["latin", "vietnamese"],
     variable: "--font-outfit",
     display: "swap",
 });
 
 const manrope = Manrope({
-    subsets: ["latin"],
+    subsets: ["latin", "vietnamese"],
     variable: "--font-manrope",
     display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
-    subsets: ["latin"],
+    subsets: ["latin", "vietnamese"],
     variable: "--font-jetbrains-mono",
     display: "swap",
 });
@@ -31,11 +36,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="scroll-smooth">
-            <body
-                className={`${outfit.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
-            >
-                {children}
+        <html lang="en" className={`${outfit.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
+            <body className="antialiased bg-background text-text-primary relative">
+                <div className="noise-overlay" />
+                <BackgroundBlobs />
+                <CustomCursor />
+                <LanguageProvider>
+                    <SmoothScroll />
+                    {children}
+                    <ScrollToTop />
+                </LanguageProvider>
             </body>
         </html>
     );

@@ -3,51 +3,47 @@
 import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { Briefcase } from "lucide-react";
+import { Briefcase, Calendar } from "lucide-react";
+import SectionWrapper from "@/components/SectionWrapper";
+import SpotlightCard from "@/components/ui/SpotlightCard";
 
 const ExperienceSection = () => {
     const { t } = useLanguage();
 
     const experiences = [
         {
-            company: "Company Name Placeholder",
             role: "Senior UI/UX Designer",
-            duration: "2023 - Present",
-            description: "Led the design team in creating user-centric digital products. Collaborated with developers to ensure high-quality implementation.",
+            company: "Tech Solutions Inc.",
+            period: "2022 - Present",
+            description: "Leading the design team, creating user-centered designs for enterprise applications.",
         },
         {
-            company: "Previous Company",
-            role: "UI Designer",
-            duration: "2021 - 2023",
-            description: "Designed responsive websites and mobile applications. Conducted user research and usability testing.",
+            role: "UI/UX Designer",
+            company: "Creative Agency",
+            period: "2020 - 2022",
+            description: "Designed websites and mobile apps for various clients, focusing on visual aesthetics and usability.",
         },
         {
-            company: "Startup Name",
-            role: "Frontend Developer",
-            duration: "2019 - 2021",
-            description: "Developed interactive user interfaces using React and Tailwind CSS. Optimized performance and accessibility.",
+            role: "Junior Web Designer",
+            company: "StartUp Hub",
+            period: "2018 - 2020",
+            description: "Assisted in designing and developing landing pages and marketing materials.",
         },
     ];
 
     return (
-        <section id="experience" className="section-padding relative">
+        <SectionWrapper id="experience" className="relative">
             <div className="container-custom">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
+                <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                         {t.experience.title}
                     </h2>
                     <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
-                </motion.div>
+                </div>
 
-                <div className="max-w-3xl mx-auto relative">
-                    {/* Vertical Line */}
-                    <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2 hidden md:block" />
-                    <div className="absolute left-4 top-0 bottom-0 w-px bg-border md:hidden" />
+                <div className="relative max-w-4xl mx-auto">
+                    {/* Timeline Line */}
+                    <div className="absolute left-[28px] top-0 bottom-0 w-0.5 bg-border md:left-1/2 md:-translate-x-1/2" />
 
                     <div className="space-y-12">
                         {experiences.map((exp, index) => (
@@ -56,40 +52,39 @@ const ExperienceSection = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: index * 0.2 }}
+                                transition={{ delay: index * 0.1 }}
                                 className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
                                     }`}
                             >
                                 {/* Timeline Dot */}
-                                <div className="absolute left-4 md:left-1/2 top-0 w-4 h-4 bg-background border-2 border-primary rounded-full -translate-x-1/2 z-10 shadow-[0_0_10px_rgba(122,242,152,0.5)]" />
-
-                                {/* Content Card */}
-                                <div className="ml-12 md:ml-0 md:w-1/2">
-                                    <div className="p-6 rounded-2xl bg-surface border border-border hover:border-primary/50 transition-colors group">
-                                        <div className="flex items-center gap-2 mb-2 text-primary text-sm font-medium">
-                                            <Briefcase size={16} />
-                                            <span>{exp.duration}</span>
-                                        </div>
-                                        <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">
-                                            {exp.role}
-                                        </h3>
-                                        <h4 className="text-text-secondary font-medium mb-4">
-                                            {exp.company}
-                                        </h4>
-                                        <p className="text-text-secondary text-sm leading-relaxed">
-                                            {exp.description}
-                                        </p>
-                                    </div>
+                                <div className="absolute left-0 md:left-1/2 w-[56px] h-[56px] flex items-center justify-center -translate-x-1/2 z-10">
+                                    <div className="w-4 h-4 bg-primary rounded-full ring-4 ring-surface" />
                                 </div>
 
-                                {/* Empty Space for alternate side */}
+                                {/* Content */}
+                                <div className="ml-16 md:ml-0 md:w-1/2">
+                                    <SpotlightCard className="p-6 group">
+                                        <div className="flex items-center gap-2 text-primary mb-2">
+                                            <Briefcase size={18} />
+                                            <span className="font-bold">{exp.role}</span>
+                                        </div>
+                                        <h3 className="text-xl font-bold mb-2">{exp.company}</h3>
+                                        <div className="flex items-center gap-2 text-sm text-text-secondary mb-4">
+                                            <Calendar size={16} />
+                                            <span>{exp.period}</span>
+                                        </div>
+                                        <p className="text-text-secondary">{exp.description}</p>
+                                    </SpotlightCard>
+                                </div>
+
+                                {/* Empty space for the other side */}
                                 <div className="hidden md:block md:w-1/2" />
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </div>
-        </section>
+        </SectionWrapper>
     );
 };
 

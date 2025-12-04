@@ -4,6 +4,8 @@ import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { Code, Layout, Database, Terminal, Figma, GitBranch } from "lucide-react";
+import SectionWrapper from "@/components/SectionWrapper";
+import SpotlightCard from "@/components/ui/SpotlightCard";
 
 const SkillsSection = () => {
     const { t } = useLanguage();
@@ -18,19 +20,14 @@ const SkillsSection = () => {
     ];
 
     return (
-        <section id="skills" className="section-padding bg-surface/30">
+        <SectionWrapper id="skills" className="bg-surface/30">
             <div className="container-custom">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
+                <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                         {t.skills.title}
                     </h2>
                     <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
-                </motion.div>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {skills.map((skill, index) => (
@@ -40,37 +37,32 @@ const SkillsSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            whileHover={{ y: -8 }}
-                            className="p-6 rounded-2xl bg-surface border border-border hover:border-primary transition-all duration-300 group cursor-default"
                         >
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="p-3 rounded-xl bg-surface-highlight text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                                    {skill.icon}
+                            <SpotlightCard className="group cursor-default h-full">
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="p-3 rounded-xl bg-surface-highlight text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                                        {skill.icon}
+                                    </div>
+                                    <h3 className="text-lg font-bold">{skill.name}</h3>
                                 </div>
-                                <h3 className="text-lg font-bold">{skill.name}</h3>
-                            </div>
 
-                            <div className="w-full h-2 bg-surface-highlight rounded-full overflow-hidden">
-                                <motion.div
-                                    initial={{ width: 0 }}
-                                    whileInView={{ width: `${skill.level}%` }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 1, delay: 0.5 }}
-                                    className="h-full bg-primary rounded-full"
-                                />
-                            </div>
+                                <div className="w-full h-2 bg-surface-highlight rounded-full overflow-hidden">
+                                    <motion.div
+                                        initial={{ width: 0 }}
+                                        whileInView={{ width: `${skill.level}%` }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1, delay: 0.5 }}
+                                        className="h-full bg-primary rounded-full"
+                                    />
+                                </div>
+                            </SpotlightCard>
                         </motion.div>
                     ))}
                 </div>
 
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
                     {/* Soft Skills */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="p-8 rounded-2xl bg-surface border border-border"
-                    >
+                    <SpotlightCard className="p-8">
                         <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                             <span className="w-2 h-8 bg-primary rounded-full" />
                             {t.skills.soft}
@@ -82,15 +74,10 @@ const SkillsSection = () => {
                                 </span>
                             ))}
                         </div>
-                    </motion.div>
+                    </SpotlightCard>
 
                     {/* Languages */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="p-8 rounded-2xl bg-surface border border-border"
-                    >
+                    <SpotlightCard className="p-8">
                         <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                             <span className="w-2 h-8 bg-primary rounded-full" />
                             {t.skills.languages}
@@ -112,10 +99,10 @@ const SkillsSection = () => {
                                 <div className="w-[80%] h-full bg-primary rounded-full" />
                             </div>
                         </div>
-                    </motion.div>
+                    </SpotlightCard>
                 </div>
             </div>
-        </section>
+        </SectionWrapper>
     );
 };
 

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, Facebook, Linkedin, Github, Globe } from "lucide-react";
+import SectionWrapper from "@/components/SectionWrapper";
 
 const ContactSection = () => {
     const { t } = useLanguage();
@@ -32,28 +33,18 @@ const ContactSection = () => {
     };
 
     return (
-        <section id="contact" className="section-padding bg-surface/30">
+        <SectionWrapper id="contact" className="bg-surface/30">
             <div className="container-custom">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
+                <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
                         {t.contact.title}
                     </h2>
                     <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
-                </motion.div>
+                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     {/* Contact Info (40%) */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="lg:col-span-5 space-y-8"
-                    >
+                    <div className="lg:col-span-5 space-y-8">
                         <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
                         <p className="text-text-secondary leading-relaxed mb-8">
                             I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
@@ -112,17 +103,11 @@ const ContactSection = () => {
                                 </a>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Contact Form (60%) */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="lg:col-span-7"
-                    >
-                        <form onSubmit={handleSubmit} className="p-8 rounded-2xl bg-surface border border-border space-y-6">
+                    <div className="lg:col-span-7">
+                        <form onSubmit={handleSubmit} className="p-8 rounded-[32px] bg-surface border border-border space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label htmlFor="name" className="text-sm font-medium ml-1">
@@ -186,10 +171,10 @@ const ContactSection = () => {
                                 )}
                             </button>
                         </form>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </SectionWrapper>
     );
 };
 

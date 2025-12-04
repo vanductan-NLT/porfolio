@@ -57,9 +57,9 @@ This document serves as the **absolute source of truth** for the design system. 
 ### Border Radius (Bo góc)
 - **None:** `0px` (Sharp edges for brutalist accents).
 - **Sm:** `8px` (Inner elements, checkboxes).
-- **Md:** `12px` (Inputs, small cards).
-- **Lg:** `16px` (Standard cards).
-- **Xl:** `24px` (Large containers, modals).
+- **Md:** `16px` (Inputs, small cards).
+- **Lg:** `24px` (Standard cards).
+- **Xl:** `32px` (Large containers, modals).
 - **Full:** `9999px` (Buttons, Badges, Avatars).
 
 ---

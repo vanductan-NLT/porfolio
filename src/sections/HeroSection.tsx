@@ -4,6 +4,7 @@ import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 const HeroSection = () => {
     const { t } = useLanguage();
@@ -80,23 +81,18 @@ const HeroSection = () => {
                         variants={itemVariants}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
-                        <a
-                            href="#contact"
-                            className="group relative inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-primary-foreground bg-primary rounded-full overflow-hidden transition-transform hover:scale-105 active:scale-95"
-                        >
-                            <span className="relative z-10 flex items-center gap-2">
+                        <Button asChild className="group">
+                            <a href="#contact">
                                 {t.hero.cta_primary}
-                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                            </span>
-                            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                        </a>
+                                <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                            </a>
+                        </Button>
 
-                        <a
-                            href="#projects"
-                            className="group inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-text-primary bg-surface border border-border rounded-full hover:bg-surface-highlight transition-all hover:scale-105 active:scale-95"
-                        >
-                            {t.hero.cta_secondary}
-                        </a>
+                        <Button variant="secondary" asChild>
+                            <a href="#projects">
+                                {t.hero.cta_secondary}
+                            </a>
+                        </Button>
                     </motion.div>
                 </motion.div>
             </div>
