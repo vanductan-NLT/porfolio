@@ -17,7 +17,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/vanductan-NLT/porfolio/issues"
   },
@@ -34,6 +33,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.25",
     "lucide-react": "^0.555.0",

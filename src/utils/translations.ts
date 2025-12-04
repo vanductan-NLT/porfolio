@@ -44,7 +44,7 @@ export const translations = {
             name_label: "Họ và tên",
             email_label: "Email",
             message_label: "Tin nhắn",
-            submit: "Gửi tin nhắn",
+            submit: "Gửi",
             success: "Tin nhắn đã được gửi!",
         },
         education: {
@@ -102,7 +102,7 @@ export const translations = {
             name_label: "Name",
             email_label: "Email",
             message_label: "Message",
-            submit: "Send Message",
+            submit: "Send",
             success: "Message sent!",
         },
         education: {

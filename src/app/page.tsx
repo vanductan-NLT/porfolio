@@ -12,6 +12,7 @@ import ContactSection from "@/sections/ContactSection";
 import EducationSection from "@/sections/EducationSection";
 import CertificateSection from "@/sections/CertificateSection";
 import InterestsSection from "@/sections/InterestsSection";
+import QASection from "@/sections/QASection";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
@@ -34,6 +35,7 @@ export default function Home() {
                     <EducationSection />
                     <CertificateSection />
                     <InterestsSection />
+                    <QASection />
                     <ContactSection />
 
                     {/* Footer */}
