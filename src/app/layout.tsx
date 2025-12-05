@@ -42,9 +42,10 @@ export default function RootLayout({
                 <BackgroundBlobs />
                 <CustomCursor />
                 <LanguageProvider>
-                    <SmoothScroll />
-                    {children}
-                    <ScrollToTop />
+                    <SmoothScroll>
+                        {children}
+                        <ScrollToTop />
+                    </SmoothScroll>
                 </LanguageProvider>
             </body>
         </html>

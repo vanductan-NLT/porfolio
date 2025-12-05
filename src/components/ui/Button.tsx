@@ -16,8 +16,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
         const variants = {
             primary: "bg-primary text-primary-foreground hover:scale-105 hover:shadow-[0_0_20px_rgba(122,242,152,0.4)]",
-            secondary: "bg-transparent text-white border border-border hover:bg-surface-highlight hover:border-white",
-            icon: "bg-surface text-white hover:bg-primary hover:text-primary-foreground",
+            secondary: "bg-transparent text-text-primary border border-border hover:bg-surface-highlight hover:border-text-primary",
+            icon: "bg-surface text-text-primary hover:bg-primary hover:text-primary-foreground",
         };
 
         const sizes = {

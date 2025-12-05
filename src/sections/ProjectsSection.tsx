@@ -7,6 +7,7 @@ import { ExternalLink, Github } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import { Button } from "@/components/ui/Button";
 import SpotlightCard from "@/components/ui/SpotlightCard";
+import { Reveal } from "@/components/ui/Reveal";
 
 const ProjectsSection = () => {
     const { t } = useLanguage();
@@ -41,23 +42,20 @@ const ProjectsSection = () => {
     return (
         <SectionWrapper id="projects" className="bg-surface/30">
             <div className="container-custom">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-                        {t.projects.title}
-                    </h2>
-                    <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
+                <div className="text-center mb-16 flex flex-col items-center">
+                    <Reveal width="100%">
+                        <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+                            {t.projects.title}
+                        </h2>
+                    </Reveal>
+                    <Reveal width="100%" delay={0.2}>
+                        <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
+                    </Reveal>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="h-full"
-                        >
+                        <Reveal key={index} width="100%" delay={index * 0.1} className="h-full">
                             <SpotlightCard className="p-0 overflow-hidden flex flex-col h-full group">
                                 {/* Project Image Placeholder */}
                                 <div className={`h-48 ${project.image} relative overflow-hidden`}>
@@ -100,7 +98,7 @@ const ProjectsSection = () => {
                                     </div>
                                 </div>
                             </SpotlightCard>
-                        </motion.div>
+                        </Reveal>
                     ))}
                 </div>
             </div>

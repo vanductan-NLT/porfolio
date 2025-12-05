@@ -23,11 +23,14 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
+import { useLenis } from "@/components/SmoothScroll";
+
 const Sidebar = () => {
     const { t, language, toggleLanguage } = useLanguage();
     const { theme, toggleTheme } = useTheme();
     const [activeSection, setActiveSection] = useState("hero");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const lenis = useLenis();
 
     const navLinks = [
         { href: "#hero", label: "Home", icon: <Home size={20} /> },
@@ -57,6 +60,17 @@ const Sidebar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [navLinks]);
 
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        if (lenis) {
+            lenis.scrollTo(href);
+        } else {
+            const element = document.querySelector(href);
+            element?.scrollIntoView({ behavior: "smooth" });
+        }
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <>
             {/* Mobile Header */}
@@ -80,10 +94,10 @@ const Sidebar = () => {
                     >
                         <nav className="flex flex-col gap-6">
                             {navLinks.map((link) => (
-                                <Link
+                                <a
                                     key={link.href}
                                     href={link.href}
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    onClick={(e) => handleNavClick(e, link.href)}
                                     className={cn(
                                         "text-lg font-medium flex items-center gap-4 p-2 rounded-xl transition-colors",
                                         activeSection === link.href.substring(1)
@@ -93,7 +107,7 @@ const Sidebar = () => {
                                 >
                                     {link.icon}
                                     {link.label}
-                                </Link>
+                                </a>
                             ))}
                         </nav>
                     </motion.div>
@@ -118,17 +132,25 @@ const Sidebar = () => {
                     <nav className="flex flex-col gap-3">
                         {navLinks.map((link) => (
                             <div key={link.href} className="relative group">
-                                <Link
+                                <a
                                     href={link.href}
+                                    onClick={(e) => handleNavClick(e, link.href)}
                                     className={cn(
-                                        "w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 relative z-10",
+                                        "w-12 h-12 rounded-full flex items-center justify-center transition-colors duration-300 relative z-10",
                                         activeSection === link.href.substring(1)
-                                            ? "bg-primary text-primary-foreground shadow-[0_0_15px_rgba(122,242,152,0.4)]"
-                                            : "text-text-secondary hover:bg-surface-highlight hover:text-text-primary"
+                                            ? "text-primary-foreground"
+                                            : "text-text-secondary hover:text-text-primary"
                                     )}
                                 >
+                                    {activeSection === link.href.substring(1) && (
+                                        <motion.div
+                                            layoutId="activeSection"
+                                            className="absolute inset-0 bg-primary rounded-full -z-10 shadow-[0_0_15px_rgba(122,242,152,0.4)]"
+                                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                                        />
+                                    )}
                                     {link.icon}
-                                </Link>
+                                </a>
 
                                 {/* Tooltip */}
                                 <div className="absolute left-full top-1/2 -translate-y-1/2 ml-4 px-3 py-1.5 bg-surface border border-border rounded-lg text-sm font-medium opacity-0 -translate-x-2 pointer-events-none group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap z-0">
