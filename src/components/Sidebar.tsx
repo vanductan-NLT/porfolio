@@ -121,7 +121,7 @@ const Sidebar = () => {
                     initial={{ x: -50, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="bg-surface/60 backdrop-blur-xl border border-white/10 p-3 rounded-[32px] shadow-2xl flex flex-col items-center gap-4"
+                    className="bg-surface/70 backdrop-blur-2xl border border-border-glass p-3 rounded-[32px] shadow-soft flex flex-col items-center gap-4"
                 >
                     {/* Profile / Logo */}
                     <Link href="/" className="w-12 h-12 rounded-full bg-surface-highlight flex items-center justify-center mb-2 hover:scale-110 transition-transform">
