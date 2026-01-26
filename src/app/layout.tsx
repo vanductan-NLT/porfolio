@@ -4,6 +4,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import ScrollToTop from "@/components/ScrollToTop";
 import BackgroundBlobs from "@/components/BackgroundBlobs";
 import CustomCursor from "@/components/CustomCursor";
+import AgentationHelper from "@/components/AgentationHelper";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
 
@@ -41,6 +42,7 @@ export default function RootLayout({
                 <div className="noise-overlay" />
                 <BackgroundBlobs />
                 <CustomCursor />
+                <AgentationHelper />
                 <LanguageProvider>
                     <SmoothScroll>
                         {children}
