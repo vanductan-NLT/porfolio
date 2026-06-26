@@ -8,16 +8,7 @@ import { GraduationCap, Calendar } from "lucide-react";
 const EducationSection = () => {
     const { t } = useLanguage();
 
-    // NOTE: Based on public GitHub info ("Studying Computer Science at UIT").
-    // Confirm start/graduation years and add any other schooling.
-    const education = [
-        {
-            school: "University of Information Technology (UIT), VNU-HCM",
-            degree: "Bachelor — Computer Science",
-            year: "In Progress",
-            description: "Studying Computer Science, focusing on software engineering, AI, and building real-world applications.",
-        },
-    ];
+    const education = t.education.items;
 
     return (
         <section id="education" className="section-padding relative">

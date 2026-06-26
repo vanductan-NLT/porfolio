@@ -100,9 +100,9 @@ const HeroSection = () => {
                     {/* Description */}
                     <Reveal width="100%" delay={0.5}>
                         <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed text-center px-4">
-                            I build internal tools, automate workflows, and integrate AI into real products.
+                            {t.hero.desc1}
                             <br className="hidden md:block" />
-                            Full-stack with TypeScript, Python, and a focus on clean, shippable code.
+                            {t.hero.desc2}
                         </p>
                     </Reveal>
 
@@ -130,39 +130,19 @@ const HeroSection = () => {
                     {/* Stats Row */}
                     <Reveal width="100%" delay={0.8}>
                         <div className="flex flex-wrap justify-center gap-8 md:gap-12 mt-16 pt-8 border-t border-border-subtle">
-                            <div className="text-center">
-                                <motion.span
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 1, type: "spring" }}
-                                    className="block text-3xl md:text-4xl font-heading font-bold text-primary"
-                                >
-                                    28+
-                                </motion.span>
-                                <span className="text-sm text-text-muted">Public Repos</span>
-                            </div>
-                            <div className="text-center">
-                                <motion.span
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 1.1, type: "spring" }}
-                                    className="block text-3xl md:text-4xl font-heading font-bold text-primary"
-                                >
-                                    20+
-                                </motion.span>
-                                <span className="text-sm text-text-muted">Projects Built</span>
-                            </div>
-                            <div className="text-center">
-                                <motion.span
-                                    initial={{ opacity: 0, scale: 0.5 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 1.2, type: "spring" }}
-                                    className="block text-3xl md:text-4xl font-heading font-bold text-primary"
-                                >
-                                    8+
-                                </motion.span>
-                                <span className="text-sm text-text-muted">Technologies</span>
-                            </div>
+                            {t.hero.stats.map((stat, index) => (
+                                <div key={stat.label} className="text-center">
+                                    <motion.span
+                                        initial={{ opacity: 0, scale: 0.5 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        transition={{ delay: 1 + index * 0.1, type: "spring" }}
+                                        className="block text-3xl md:text-4xl font-heading font-bold text-primary"
+                                    >
+                                        {stat.value}
+                                    </motion.span>
+                                    <span className="text-sm text-text-muted">{stat.label}</span>
+                                </div>
+                            ))}
                         </div>
                     </Reveal>
                 </div>
@@ -184,7 +164,7 @@ const HeroSection = () => {
                     }}
                     className="flex flex-col items-center gap-2 text-text-muted"
                 >
-                    <span className="text-xs uppercase tracking-widest font-medium">Scroll</span>
+                    <span className="text-xs uppercase tracking-widest font-medium">{t.hero.scroll}</span>
                     <ArrowDown size={20} className="text-primary" />
                 </motion.div>
             </motion.div>

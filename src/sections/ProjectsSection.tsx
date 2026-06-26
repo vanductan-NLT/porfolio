@@ -16,69 +16,47 @@ const ProjectsSection = () => {
     const { t } = useLanguage();
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-    const projects = [
+    // Language-neutral config (urls, visuals, tags), merged by index with translated text.
+    const projectMeta = [
         {
-            title: "agent-action-guardian",
-            category: "Dev Tool",
-            gradient: "from-[#99e5b7] to-[#7af298]",
-            description: "Real-time guardrail for AI coding agents — intercept, explain, and confirm before damage is done.",
-            tags: ["Python", "AI Agents", "Safety"],
-            links: { demo: "", github: "https://github.com/vanductan-NLT/agent-action-guardian" },
-            featured: true,
-        },
-        {
-            title: "the-blind-eye",
-            category: "AI",
+            categoryKey: "ai",
             gradient: "from-[#83af95] to-[#99e5b7]",
-            description: "An application built on Google AI Studio — a friend for blind people, using AI to describe the world around them.",
-            tags: ["TypeScript", "Google AI Studio", "Accessibility"],
+            tags: ["TypeScript", "Google AI Studio", "DeepMind"],
             links: { demo: "", github: "https://github.com/vanductan-NLT/the-blind-eye" },
             featured: true,
         },
         {
-            title: "tanflow",
-            category: "Web App",
-            gradient: "from-[#7af298] to-[#bbeecf]",
-            description: "A beautiful Pomodoro timer with health reminders and background music to boost your productivity.",
-            tags: ["TypeScript", "React", "Productivity"],
-            links: { demo: "", github: "https://github.com/vanductan-NLT/tanflow" },
+            categoryKey: "automation",
+            gradient: "from-[#bbeecf] to-[#99e5b7]",
+            tags: ["Python", "Notion API", "Whisper", "Gemini API"],
+            links: { demo: "", github: "https://github.com/vanductan-NLT/meeting-to-notion-page" },
             featured: true,
         },
         {
-            title: "meeting-to-notion-page",
-            category: "Automation",
-            gradient: "from-[#bbeecf] to-[#99e5b7]",
-            description: "Converts meeting audio and related documents into organized Notion pages, automatically.",
-            tags: ["Python", "Automation", "Notion API"],
-            links: { demo: "", github: "https://github.com/vanductan-NLT/meeting-to-notion-page" },
-            featured: false,
+            categoryKey: "devtool",
+            gradient: "from-[#99e5b7] to-[#7af298]",
+            tags: ["Python", "LLM API"],
+            links: { demo: "", github: "https://github.com/vanductan-NLT/agent-action-guardian" },
+            featured: true,
         },
         {
-            title: "database-to-text",
-            category: "AI",
-            gradient: "from-[#99e5b7] to-[#83af95]",
-            description: "A natural-language-to-SQL AI agent built with LangChain, Supabase Postgres, and a Telegram bot.",
-            tags: ["Python", "LangChain", "Supabase"],
-            links: { demo: "", github: "https://github.com/vanductan-NLT/database-to-text" },
-            featured: false,
-        },
-        {
-            title: "uit-hub",
-            category: "Web App",
-            gradient: "from-[#bbeecf] to-[#7af298]",
-            description: "A hub customized for each UIT student, bringing the tools and info they need into one place.",
-            tags: ["TypeScript", "Next.js", "Supabase"],
+            categoryKey: "webapp",
+            gradient: "from-[#7af298] to-[#bbeecf]",
+            tags: ["TypeScript", "Next.js"],
             links: { demo: "", github: "https://github.com/vanductan-NLT/uit-hub" },
             featured: false,
         },
     ];
 
-    const categories = ["All", "AI", "Automation", "Web App", "Dev Tool"];
-    const [activeCategory, setActiveCategory] = useState("All");
+    const projects = t.projects.items.map((item, i) => ({ ...item, ...projectMeta[i] }));
 
-    const filteredProjects = activeCategory === "All"
+    const categoryKeys = ["all", "ai", "automation", "devtool", "webapp"];
+    const categories = t.projects.categories.map((label, i) => ({ key: categoryKeys[i], label }));
+    const [activeKey, setActiveKey] = useState("all");
+
+    const filteredProjects = activeKey === "all"
         ? projects
-        : projects.filter(p => p.category === activeCategory);
+        : projects.filter(p => p.categoryKey === activeKey);
 
     return (
         <SectionWrapper id="projects" className="relative overflow-hidden">
@@ -87,17 +65,17 @@ const ProjectsSection = () => {
                 <div className="text-center mb-12">
                     <Reveal width="100%">
                         <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                            {t.projects.title}
+                            {t.projects.badge}
                         </span>
                     </Reveal>
                     <Reveal width="100%" delay={0.1}>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
-                            Featured <span className="text-primary">Projects</span>
+                            {t.projects.title}<span className="text-primary">{t.projects.titleAccent}</span>
                         </h2>
                     </Reveal>
                     <Reveal width="100%" delay={0.2}>
                         <p className="text-text-secondary max-w-2xl mx-auto">
-                            A selection of real projects I've built — AI tools, automation, and full-stack apps
+                            {t.projects.subtitle}
                         </p>
                     </Reveal>
                 </div>
@@ -107,14 +85,14 @@ const ProjectsSection = () => {
                     <div className="flex flex-wrap justify-center gap-3 mb-12">
                         {categories.map((category) => (
                             <button
-                                key={category}
-                                onClick={() => setActiveCategory(category)}
-                                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
+                                key={category.key}
+                                onClick={() => setActiveKey(category.key)}
+                                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeKey === category.key
                                         ? "bg-primary text-primary-foreground shadow-glow"
                                         : "bg-surface-highlight text-text-secondary hover:bg-surface hover:text-text-primary"
                                     }`}
                             >
-                                {category}
+                                {category.label}
                             </button>
                         ))}
                     </div>
@@ -198,7 +176,7 @@ const ProjectsSection = () => {
                                         {project.featured && (
                                             <div className="absolute top-4 right-4">
                                                 <span className="px-3 py-1 rounded-full bg-black/30 backdrop-blur-sm text-white text-xs font-medium">
-                                                    Featured
+                                                    {t.projects.featured}
                                                 </span>
                                             </div>
                                         )}
@@ -249,7 +227,7 @@ const ProjectsSection = () => {
                     <div className="flex justify-center mt-12">
                         <Button variant="secondary" className="group" asChild>
                             <a href="https://github.com/vanductan-NLT?tab=repositories" target="_blank" rel="noopener noreferrer">
-                                View All Projects on GitHub
+                                {t.projects.viewAll}
                                 <ArrowUpRight
                                     size={18}
                                     className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"

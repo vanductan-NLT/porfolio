@@ -59,20 +59,20 @@ const ContactSection = () => {
     const contactInfo = [
         {
             icon: <Mail size={20} />,
-            label: "Email",
+            label: t.contact.info_email,
             value: "vanductan.nlt@gmail.com",
             href: "mailto:vanductan.nlt@gmail.com",
         },
         {
             icon: <Phone size={20} />,
-            label: "Phone",
+            label: t.contact.info_phone,
             value: "+84 926 236 105",
             href: "tel:+84926236105",
         },
         {
             icon: <MapPin size={20} />,
-            label: "Location",
-            value: "Vietnam",
+            label: t.contact.info_location,
+            value: t.contact.location_value,
             href: null,
         },
     ];
@@ -117,17 +117,17 @@ const ContactSection = () => {
                 <div className="text-center mb-16">
                     <Reveal width="100%">
                         <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                            {t.contact.title}
+                            {t.contact.badge}
                         </span>
                     </Reveal>
                     <Reveal width="100%" delay={0.1}>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
-                            Let's Work <span className="text-primary">Together</span>
+                            {t.contact.title}<span className="text-primary">{t.contact.titleAccent}</span>
                         </h2>
                     </Reveal>
                     <Reveal width="100%" delay={0.2}>
                         <p className="text-text-secondary max-w-2xl mx-auto">
-                            Have a project in mind? Let's create something amazing together.
+                            {t.contact.subtitle}
                         </p>
                     </Reveal>
                 </div>
@@ -141,12 +141,11 @@ const ContactSection = () => {
                                     <div className="p-2 rounded-lg bg-primary/10">
                                         <Sparkles size={20} className="text-primary" />
                                     </div>
-                                    <h3 className="text-xl font-heading font-bold">Get in Touch</h3>
+                                    <h3 className="text-xl font-heading font-bold">{t.contact.getInTouch}</h3>
                                 </div>
 
                                 <p className="text-text-secondary leading-relaxed mb-8">
-                                    I'm always open to discussing new projects, creative ideas,
-                                    or opportunities to be part of your visions.
+                                    {t.contact.getInTouchDesc}
                                 </p>
 
                                 <div className="space-y-5">
@@ -194,7 +193,7 @@ const ContactSection = () => {
                             <SpotlightCard className="p-6 md:p-8">
                                 <h4 className="text-sm font-bold mb-4 uppercase tracking-wider flex items-center gap-2">
                                     <span className="w-1 h-4 bg-primary rounded-full" />
-                                    Follow Me
+                                    {t.contact.followMe}
                                 </h4>
                                 <div className="flex gap-3">
                                     {socialLinks.map((social, index) => (
@@ -240,7 +239,7 @@ const ContactSection = () => {
                                                 required
                                                 disabled={isSubmitting}
                                                 className="w-full px-4 py-3.5 rounded-xl bg-surface-highlight border border-transparent focus:border-primary focus:bg-background focus:shadow-glow outline-none transition-all duration-300 disabled:opacity-50"
-                                                placeholder="Your name"
+                                                placeholder={t.contact.name_ph}
                                             />
                                         </div>
 
@@ -258,7 +257,7 @@ const ContactSection = () => {
                                                 required
                                                 disabled={isSubmitting}
                                                 className="w-full px-4 py-3.5 rounded-xl bg-surface-highlight border border-transparent focus:border-primary focus:bg-background focus:shadow-glow outline-none transition-all duration-300 disabled:opacity-50"
-                                                placeholder="your@email.com"
+                                                placeholder={t.contact.email_ph}
                                             />
                                         </div>
                                     </div>
@@ -277,7 +276,7 @@ const ContactSection = () => {
                                             disabled={isSubmitting}
                                             rows={5}
                                             className="w-full px-4 py-3.5 rounded-xl bg-surface-highlight border border-transparent focus:border-primary focus:bg-background focus:shadow-glow outline-none transition-all duration-300 resize-none disabled:opacity-50"
-                                            placeholder="Tell me about your project..."
+                                            placeholder={t.contact.message_ph}
                                         />
                                     </div>
 
@@ -312,7 +311,7 @@ const ContactSection = () => {
                                                         transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
                                                         className="w-5 h-5 border-2 border-primary-foreground border-t-transparent rounded-full"
                                                     />
-                                                    Sending...
+                                                    {t.contact.sending}
                                                 </motion.span>
                                             ) : (
                                                 <motion.span

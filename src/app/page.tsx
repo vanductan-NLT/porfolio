@@ -16,6 +16,7 @@ import QASection from "@/sections/QASection";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import MarqueeCSS from "@/components/ui/Marquee";
+import Footer from "@/components/Footer";
 import { Github } from "lucide-react";
 
 export default function Home() {
@@ -40,8 +41,9 @@ export default function Home() {
                                 <span className="text-2xl font-bold text-text-secondary opacity-50">Next.js</span>
                                 <span className="text-2xl font-bold text-text-secondary opacity-50">Node.js</span>
                                 <span className="text-2xl font-bold text-text-secondary opacity-50">Python</span>
-                                <span className="text-2xl font-bold text-text-secondary opacity-50">Supabase</span>
+                                <span className="text-2xl font-bold text-text-secondary opacity-50">PostgreSQL</span>
                                 <span className="text-2xl font-bold text-text-secondary opacity-50">n8n</span>
+                                <span className="text-2xl font-bold text-text-secondary opacity-50">Make.com</span>
                                 <Github size={40} className="text-text-secondary opacity-50 hover:opacity-100 transition-opacity" />
                                 <span className="text-2xl font-bold text-text-secondary opacity-50">Vercel</span>
                             </MarqueeCSS>
@@ -59,12 +61,7 @@ export default function Home() {
                         <ContactSection />
 
                         {/* Footer */}
-                        <footer className="py-8 text-center text-text-secondary text-sm border-t border-border bg-surface/30">
-                            <div className="container-custom">
-                                <p>© {new Date().getFullYear()} Van Duc Tan. All rights reserved.</p>
-                                <p className="mt-2">Designed & Built with ❤️ using Next.js & Tailwind CSS</p>
-                            </div>
-                        </footer>
+                        <Footer />
                     </div>
                 </main>
             </LanguageProvider>

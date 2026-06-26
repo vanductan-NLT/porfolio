@@ -9,32 +9,10 @@ const CertificateSection = () => {
     const { t } = useLanguage();
 
     // Real GitHub achievement badges earned on @vanductan-NLT.
-    const certificates = [
-        {
-            name: "Pull Shark",
-            issuer: "Opened pull requests that have been merged",
-            year: "×3",
-            link: "https://github.com/vanductan-NLT",
-        },
-        {
-            name: "Pair Extraordinaire",
-            issuer: "Coauthored commits on merged pull requests",
-            year: "×2",
-            link: "https://github.com/vanductan-NLT",
-        },
-        {
-            name: "YOLO",
-            issuer: "Merged a pull request without a review",
-            year: "×1",
-            link: "https://github.com/vanductan-NLT",
-        },
-        {
-            name: "Quickdraw",
-            issuer: "Closed an issue or pull request within 5 minutes",
-            year: "×1",
-            link: "https://github.com/vanductan-NLT",
-        },
-    ];
+    const certificates = t.certificates.items.map((cert) => ({
+        ...cert,
+        link: "https://github.com/vanductan-NLT",
+    }));
 
     return (
         <section id="certificates" className="section-padding bg-surface/30">
