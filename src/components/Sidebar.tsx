@@ -33,7 +33,7 @@ const Sidebar = () => {
     const lenis = useLenis();
 
     const navLinks = [
-        { href: "#hero", label: "Home", icon: <Home size={20} /> },
+        { href: "#hero", label: t.nav.home, icon: <Home size={20} /> },
         { href: "#about", label: t.nav.about, icon: <User size={20} /> },
         { href: "#skills", label: t.nav.skills, icon: <Code2 size={20} /> },
         { href: "#experience", label: t.nav.experience, icon: <Briefcase size={20} /> },

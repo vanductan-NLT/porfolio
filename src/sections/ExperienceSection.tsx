@@ -14,18 +14,7 @@ import { Reveal } from "@/components/ui/Reveal";
 const ExperienceSection = () => {
     const { t } = useLanguage();
 
-    // NOTE: Roles/dates below are based on public GitHub info (NhiLe Team, @NhiLe-Team-Webs).
-    // Confirm exact titles, dates and add any prior roles.
-    const experiences = [
-        {
-            role: "Team Lead & Full-Stack Developer",
-            company: "NhiLe Team",
-            location: "Remote",
-            period: "2025 — Present",
-            description: "Leading a remote team while building internal tools, automating workflows with n8n, and integrating AI into real products. Working full-stack across TypeScript, Next.js, Node.js and Python.",
-            highlights: ["Full-Stack", "AI Integration", "Automation", "Team Lead"],
-        },
-    ];
+    const experiences = t.experience.items;
 
     return (
         <SectionWrapper id="experience" className="relative overflow-hidden">
@@ -34,17 +23,17 @@ const ExperienceSection = () => {
                 <div className="text-center mb-16">
                     <Reveal width="100%">
                         <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                            {t.experience.title}
+                            {t.experience.badge}
                         </span>
                     </Reveal>
                     <Reveal width="100%" delay={0.1}>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
-                            Work <span className="text-primary">Experience</span>
+                            {t.experience.title}<span className="text-primary">{t.experience.titleAccent}</span>
                         </h2>
                     </Reveal>
                     <Reveal width="100%" delay={0.2}>
                         <p className="text-text-secondary max-w-2xl mx-auto">
-                            My professional journey building software and leading teams
+                            {t.experience.subtitle}
                         </p>
                     </Reveal>
                 </div>

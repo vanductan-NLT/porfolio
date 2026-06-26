@@ -97,43 +97,17 @@ const SkillsSection = () => {
         { name: "React / Next.js", icon: <Code size={20} />, level: 88 },
         { name: "Python", icon: <Terminal size={20} />, level: 85 },
         { name: "Node.js", icon: <Server size={20} />, level: 82 },
-        { name: "Supabase / PostgreSQL", icon: <Database size={20} />, level: 80 },
-        { name: "n8n / Automation", icon: <Workflow size={20} />, level: 85 },
+        { name: "PostgreSQL", icon: <Database size={20} />, level: 80 },
+        { name: "n8n / Make.com", icon: <Workflow size={20} />, level: 85 },
     ];
 
-    const expertiseAreas = [
-        {
-            icon: <Code size={28} />,
-            title: "Full-Stack Development",
-            description: "Building end-to-end web apps with React, Next.js, Node.js and TypeScript."
-        },
-        {
-            icon: <Bot size={28} />,
-            title: "AI Integration",
-            description: "Bringing LLMs and AI agents into real products — from coding guardrails to accessibility tools."
-        },
-        {
-            icon: <Workflow size={28} />,
-            title: "Workflow Automation",
-            description: "Turning manual, repetitive work into automated pipelines with n8n and custom scripts."
-        },
-        {
-            icon: <Database size={28} />,
-            title: "Backend Infrastructure",
-            description: "Designing data models and backends on Supabase, PostgreSQL and Node.js."
-        },
+    const expertiseIcons = [
+        <Code size={28} />,
+        <Bot size={28} />,
+        <Database size={28} />,
+        <Workflow size={28} />,
     ];
-
-    const softSkills = [
-        "Communication",
-        "Teamwork",
-        "Problem Solving",
-        "Time Management",
-        "Leadership",
-        "Creativity",
-        "Adaptability",
-        "Critical Thinking"
-    ];
+    const expertiseAreas = t.skills.expertise.map((area, i) => ({ ...area, icon: expertiseIcons[i] }));
 
     return (
         <SectionWrapper id="skills" className="relative overflow-hidden">
@@ -142,19 +116,18 @@ const SkillsSection = () => {
                 <div className="text-center mb-16">
                     <Reveal width="100%">
                         <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                            {t.skills.title}
+                            {t.skills.badge}
                         </span>
                     </Reveal>
                     <Reveal width="100%" delay={0.1}>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
-                            My Professional Skills
-                            <span className="text-primary"> & Expertise</span>
+                            {t.skills.title}
+                            <span className="text-primary">{t.skills.titleAccent}</span>
                         </h2>
                     </Reveal>
                     <Reveal width="100%" delay={0.2}>
                         <p className="text-text-secondary max-w-2xl mx-auto">
-                            Full-stack engineering, AI integration, and automation —
-                            the toolkit I use to ship real products.
+                            {t.skills.subtitle}
                         </p>
                     </Reveal>
                 </div>
@@ -166,7 +139,7 @@ const SkillsSection = () => {
                         <SpotlightCard className="h-full">
                             <h3 className="text-xl font-heading font-bold mb-8 flex items-center gap-3">
                                 <span className="w-1 h-8 bg-primary rounded-full" />
-                                Technical Skills
+                                {t.skills.technicalTitle}
                             </h3>
                             <div className="space-y-6">
                                 {technicalSkills.map((skill, index) => (
@@ -187,7 +160,7 @@ const SkillsSection = () => {
                         <Reveal width="100%" delay={0.4}>
                             <h3 className="text-xl font-heading font-bold mb-6 flex items-center gap-3">
                                 <span className="w-1 h-8 bg-primary rounded-full" />
-                                Areas of Expertise
+                                {t.skills.expertiseTitle}
                             </h3>
                         </Reveal>
 
@@ -218,10 +191,10 @@ const SkillsSection = () => {
                         <SpotlightCard className="h-full">
                             <h3 className="text-xl font-heading font-bold mb-6 flex items-center gap-3">
                                 <span className="w-1 h-8 bg-primary rounded-full" />
-                                {t.skills.soft}
+                                {t.skills.softTitle}
                             </h3>
                             <div className="flex flex-wrap gap-3">
-                                {softSkills.map((skill, index) => (
+                                {t.skills.soft.map((skill, index) => (
                                     <motion.span
                                         key={skill}
                                         initial={{ opacity: 0, scale: 0.8 }}
@@ -243,48 +216,29 @@ const SkillsSection = () => {
                         <SpotlightCard className="h-full">
                             <h3 className="text-xl font-heading font-bold mb-6 flex items-center gap-3">
                                 <span className="w-1 h-8 bg-primary rounded-full" />
-                                {t.skills.languages}
+                                {t.skills.langTitle}
                             </h3>
                             <div className="space-y-5">
-                                {/* Vietnamese */}
-                                <div>
-                                    <div className="flex justify-between items-center mb-2">
-                                        <div className="flex items-center gap-2">
-                                            <Globe size={18} className="text-primary" />
-                                            <span className="font-medium">Vietnamese</span>
+                                {t.skills.languages.map((lang, index) => (
+                                    <div key={lang.name}>
+                                        <div className="flex justify-between items-center mb-2">
+                                            <div className="flex items-center gap-2">
+                                                <Globe size={18} className="text-primary" />
+                                                <span className="font-medium">{lang.name}</span>
+                                            </div>
+                                            <span className="text-text-secondary text-sm">{lang.level}</span>
                                         </div>
-                                        <span className="text-text-secondary text-sm">Native</span>
-                                    </div>
-                                    <div className="h-1.5 bg-surface-highlight rounded-full overflow-hidden">
-                                        <motion.div
-                                            initial={{ width: 0 }}
-                                            whileInView={{ width: "100%" }}
-                                            viewport={{ once: true }}
-                                            transition={{ duration: 1, ease: "easeOut" }}
-                                            className="h-full bg-gradient-to-r from-primary to-primary-light rounded-full"
-                                        />
-                                    </div>
-                                </div>
-
-                                {/* English */}
-                                <div>
-                                    <div className="flex justify-between items-center mb-2">
-                                        <div className="flex items-center gap-2">
-                                            <Globe size={18} className="text-primary" />
-                                            <span className="font-medium">English</span>
+                                        <div className="h-1.5 bg-surface-highlight rounded-full overflow-hidden">
+                                            <motion.div
+                                                initial={{ width: 0 }}
+                                                whileInView={{ width: `${lang.pct}%` }}
+                                                viewport={{ once: true }}
+                                                transition={{ duration: 1, delay: index * 0.2, ease: "easeOut" }}
+                                                className="h-full bg-gradient-to-r from-primary to-primary-light rounded-full"
+                                            />
                                         </div>
-                                        <span className="text-text-secondary text-sm">Professional</span>
                                     </div>
-                                    <div className="h-1.5 bg-surface-highlight rounded-full overflow-hidden">
-                                        <motion.div
-                                            initial={{ width: 0 }}
-                                            whileInView={{ width: "85%" }}
-                                            viewport={{ once: true }}
-                                            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-                                            className="h-full bg-gradient-to-r from-primary to-primary-light rounded-full"
-                                        />
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </SpotlightCard>
                     </Reveal>

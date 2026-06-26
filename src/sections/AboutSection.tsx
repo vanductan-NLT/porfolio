@@ -15,23 +15,8 @@ import { Button } from "@/components/ui/Button";
 const AboutSection = () => {
     const { t } = useLanguage();
 
-    const stats = [
-        {
-            value: "28+",
-            label: t.about.years_exp,
-            icon: <Github size={20} />,
-        },
-        {
-            value: "20+",
-            label: t.about.projects_done,
-            icon: <Award size={20} />,
-        },
-        {
-            value: "8+",
-            label: "Technologies",
-            icon: <Code2 size={20} />,
-        },
-    ];
+    const statIcons = [<Github size={20} />, <Award size={20} />, <Code2 size={20} />];
+    const stats = t.about.stats.map((stat, i) => ({ ...stat, icon: statIcons[i] }));
 
     return (
         <SectionWrapper id="about" className="relative overflow-hidden">
@@ -40,7 +25,7 @@ const AboutSection = () => {
                 <div className="text-center mb-12 lg:hidden">
                     <Reveal width="100%">
                         <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                            About Me
+                            {t.about.badge}
                         </span>
                     </Reveal>
                 </div>
@@ -58,7 +43,7 @@ const AboutSection = () => {
                                             <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center">
                                                 <span className="text-5xl font-heading font-bold text-primary-foreground">T</span>
                                             </div>
-                                            <p className="text-text-muted text-sm">Profile Image</p>
+                                            <p className="text-text-muted text-sm">{t.about.image_placeholder}</p>
                                         </div>
                                     </div>
 
@@ -96,7 +81,7 @@ const AboutSection = () => {
                                         </div>
                                         <div>
                                             <p className="text-2xl font-heading font-bold text-primary">28+</p>
-                                            <p className="text-xs text-text-muted">Public Repos</p>
+                                            <p className="text-xs text-text-muted">{t.about.badge_label}</p>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -109,7 +94,7 @@ const AboutSection = () => {
                         {/* Section Badge - Desktop */}
                         <Reveal width="100%" delay={0.1}>
                             <span className="hidden lg:inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                                About Me
+                                {t.about.badge}
                             </span>
                         </Reveal>
 
@@ -128,9 +113,7 @@ const AboutSection = () => {
 
                         <Reveal width="100%" delay={0.35}>
                             <p className="text-text-secondary mb-8 leading-relaxed">
-                                Currently a Team Lead at NhiLe Team while studying Computer Science at UIT.
-                                I work across the stack — TypeScript, React, Next.js, Node.js, Python, and Supabase —
-                                and lean heavily on automation (n8n) and AI to turn messy, manual work into real, shippable products.
+                                {t.about.description2}
                             </p>
                         </Reveal>
 
@@ -149,13 +132,13 @@ const AboutSection = () => {
                             <div className="flex flex-wrap gap-4 mb-10">
                                 <Button asChild>
                                     <a href="#contact">
-                                        Let's Talk
+                                        {t.about.cta_talk}
                                     </a>
                                 </Button>
                                 <Button variant="secondary" asChild className="group">
                                     <a href="/resume.pdf" download>
                                         <Download size={18} className="mr-2 group-hover:-translate-y-0.5 transition-transform" />
-                                        Download CV
+                                        {t.about.cta_cv}
                                     </a>
                                 </Button>
                             </div>
