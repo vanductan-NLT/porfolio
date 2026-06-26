@@ -14,30 +14,16 @@ import { Reveal } from "@/components/ui/Reveal";
 const ExperienceSection = () => {
     const { t } = useLanguage();
 
+    // NOTE: Roles/dates below are based on public GitHub info (NhiLe Team, @NhiLe-Team-Webs).
+    // Confirm exact titles, dates and add any prior roles.
     const experiences = [
         {
-            role: "Senior UI/UX Designer",
-            company: "Tech Solutions Inc.",
-            location: "Ho Chi Minh City",
-            period: "2022 - Present",
-            description: "Leading the design team, creating user-centered designs for enterprise applications. Implementing design systems and mentoring junior designers.",
-            highlights: ["Design System", "Team Lead", "Enterprise Apps"],
-        },
-        {
-            role: "UI/UX Designer",
-            company: "Creative Agency",
-            location: "Ho Chi Minh City",
-            period: "2020 - 2022",
-            description: "Designed websites and mobile apps for various clients, focusing on visual aesthetics and usability. Collaborated closely with developers.",
-            highlights: ["Web Design", "Mobile Apps", "Client Projects"],
-        },
-        {
-            role: "Junior Web Designer",
-            company: "StartUp Hub",
-            location: "Ho Chi Minh City",
-            period: "2018 - 2020",
-            description: "Assisted in designing and developing landing pages and marketing materials. Learned UX principles and design tools.",
-            highlights: ["Landing Pages", "Marketing", "UX Research"],
+            role: "Team Lead & Full-Stack Developer",
+            company: "NhiLe Team",
+            location: "Remote",
+            period: "2025 — Present",
+            description: "Leading a remote team while building internal tools, automating workflows with n8n, and integrating AI into real products. Working full-stack across TypeScript, Next.js, Node.js and Python.",
+            highlights: ["Full-Stack", "AI Integration", "Automation", "Team Lead"],
         },
     ];
 
@@ -58,7 +44,7 @@ const ExperienceSection = () => {
                     </Reveal>
                     <Reveal width="100%" delay={0.2}>
                         <p className="text-text-secondary max-w-2xl mx-auto">
-                            My professional journey in design and development
+                            My professional journey building software and leading teams
                         </p>
                     </Reveal>
                 </div>

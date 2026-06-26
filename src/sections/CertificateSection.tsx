@@ -8,24 +8,31 @@ import { Award, ExternalLink } from "lucide-react";
 const CertificateSection = () => {
     const { t } = useLanguage();
 
+    // Real GitHub achievement badges earned on @vanductan-NLT.
     const certificates = [
         {
-            name: "Google UX Design Professional Certificate",
-            issuer: "Coursera",
-            year: "2023",
-            link: "#",
+            name: "Pull Shark",
+            issuer: "Opened pull requests that have been merged",
+            year: "×3",
+            link: "https://github.com/vanductan-NLT",
         },
         {
-            name: "Meta Front-End Developer Professional Certificate",
-            issuer: "Coursera",
-            year: "2022",
-            link: "#",
+            name: "Pair Extraordinaire",
+            issuer: "Coauthored commits on merged pull requests",
+            year: "×2",
+            link: "https://github.com/vanductan-NLT",
         },
         {
-            name: "AWS Certified Cloud Practitioner",
-            issuer: "Amazon Web Services",
-            year: "2021",
-            link: "#",
+            name: "YOLO",
+            issuer: "Merged a pull request without a review",
+            year: "×1",
+            link: "https://github.com/vanductan-NLT",
+        },
+        {
+            name: "Quickdraw",
+            issuer: "Closed an issue or pull request within 5 minutes",
+            year: "×1",
+            link: "https://github.com/vanductan-NLT",
         },
     ];
 
@@ -48,6 +55,8 @@ const CertificateSection = () => {
                     {certificates.map((cert, index) => (
                         <motion.a
                             href={cert.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}

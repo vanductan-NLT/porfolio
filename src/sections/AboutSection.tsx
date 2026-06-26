@@ -3,7 +3,7 @@
 import React from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { MapPin, Download, Sparkles, Award, Users, Clock } from "lucide-react";
+import { MapPin, Download, Sparkles, Award, Github, Code2 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import SpotlightCard from "@/components/ui/SpotlightCard";
 import { Reveal } from "@/components/ui/Reveal";
@@ -17,9 +17,9 @@ const AboutSection = () => {
 
     const stats = [
         {
-            value: "5+",
+            value: "28+",
             label: t.about.years_exp,
-            icon: <Clock size={20} />,
+            icon: <Github size={20} />,
         },
         {
             value: "20+",
@@ -27,9 +27,9 @@ const AboutSection = () => {
             icon: <Award size={20} />,
         },
         {
-            value: "100%",
-            label: "Satisfaction",
-            icon: <Users size={20} />,
+            value: "8+",
+            label: "Technologies",
+            icon: <Code2 size={20} />,
         },
     ];
 
@@ -95,8 +95,8 @@ const AboutSection = () => {
                                             <Sparkles size={20} className="text-primary" />
                                         </div>
                                         <div>
-                                            <p className="text-2xl font-heading font-bold text-primary">5+</p>
-                                            <p className="text-xs text-text-muted">Years Exp.</p>
+                                            <p className="text-2xl font-heading font-bold text-primary">28+</p>
+                                            <p className="text-xs text-text-muted">Public Repos</p>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -128,9 +128,9 @@ const AboutSection = () => {
 
                         <Reveal width="100%" delay={0.35}>
                             <p className="text-text-secondary mb-8 leading-relaxed">
-                                I specialize in creating user-centered designs that balance aesthetics with functionality.
-                                My approach combines creative problem-solving with technical expertise to deliver
-                                exceptional digital experiences.
+                                Currently a Team Lead at NhiLe Team while studying Computer Science at UIT.
+                                I work across the stack — TypeScript, React, Next.js, Node.js, Python, and Supabase —
+                                and lean heavily on automation (n8n) and AI to turn messy, manual work into real, shippable products.
                             </p>
                         </Reveal>
 

@@ -18,44 +18,62 @@ const ProjectsSection = () => {
 
     const projects = [
         {
-            title: "E-Commerce Platform",
-            category: "Web Application",
+            title: "agent-action-guardian",
+            category: "Dev Tool",
             gradient: "from-[#99e5b7] to-[#7af298]",
-            description: "A full-featured e-commerce platform with cart, checkout, and admin dashboard functionality.",
-            tags: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
-            links: { demo: "#", github: "#" },
+            description: "Real-time guardrail for AI coding agents — intercept, explain, and confirm before damage is done.",
+            tags: ["Python", "AI Agents", "Safety"],
+            links: { demo: "", github: "https://github.com/vanductan-NLT/agent-action-guardian" },
             featured: true,
         },
         {
-            title: "Task Management App",
-            category: "Productivity Tool",
+            title: "the-blind-eye",
+            category: "AI",
             gradient: "from-[#83af95] to-[#99e5b7]",
-            description: "A collaborative task management application with real-time updates and team features.",
-            tags: ["React", "Firebase", "Redux", "Material UI"],
-            links: { demo: "#", github: "#" },
+            description: "An application built on Google AI Studio — a friend for blind people, using AI to describe the world around them.",
+            tags: ["TypeScript", "Google AI Studio", "Accessibility"],
+            links: { demo: "", github: "https://github.com/vanductan-NLT/the-blind-eye" },
             featured: true,
         },
         {
-            title: "Portfolio Website",
-            category: "Personal Brand",
+            title: "tanflow",
+            category: "Web App",
             gradient: "from-[#7af298] to-[#bbeecf]",
-            description: "A modern, responsive portfolio website showcasing design and development skills.",
-            tags: ["Next.js", "Framer Motion", "Tailwind"],
-            links: { demo: "#", github: "#" },
+            description: "A beautiful Pomodoro timer with health reminders and background music to boost your productivity.",
+            tags: ["TypeScript", "React", "Productivity"],
+            links: { demo: "", github: "https://github.com/vanductan-NLT/tanflow" },
+            featured: true,
+        },
+        {
+            title: "meeting-to-notion-page",
+            category: "Automation",
+            gradient: "from-[#bbeecf] to-[#99e5b7]",
+            description: "Converts meeting audio and related documents into organized Notion pages, automatically.",
+            tags: ["Python", "Automation", "Notion API"],
+            links: { demo: "", github: "https://github.com/vanductan-NLT/meeting-to-notion-page" },
             featured: false,
         },
         {
-            title: "Dashboard Analytics",
-            category: "Data Visualization",
-            gradient: "from-[#bbeecf] to-[#99e5b7]",
-            description: "A comprehensive analytics dashboard with charts, metrics, and data insights.",
-            tags: ["React", "D3.js", "Chart.js", "REST API"],
-            links: { demo: "#", github: "#" },
+            title: "database-to-text",
+            category: "AI",
+            gradient: "from-[#99e5b7] to-[#83af95]",
+            description: "A natural-language-to-SQL AI agent built with LangChain, Supabase Postgres, and a Telegram bot.",
+            tags: ["Python", "LangChain", "Supabase"],
+            links: { demo: "", github: "https://github.com/vanductan-NLT/database-to-text" },
+            featured: false,
+        },
+        {
+            title: "uit-hub",
+            category: "Web App",
+            gradient: "from-[#bbeecf] to-[#7af298]",
+            description: "A hub customized for each UIT student, bringing the tools and info they need into one place.",
+            tags: ["TypeScript", "Next.js", "Supabase"],
+            links: { demo: "", github: "https://github.com/vanductan-NLT/uit-hub" },
             featured: false,
         },
     ];
 
-    const categories = ["All", "Web Application", "Productivity Tool", "Personal Brand", "Data Visualization"];
+    const categories = ["All", "AI", "Automation", "Web App", "Dev Tool"];
     const [activeCategory, setActiveCategory] = useState("All");
 
     const filteredProjects = activeCategory === "All"
@@ -79,7 +97,7 @@ const ProjectsSection = () => {
                     </Reveal>
                     <Reveal width="100%" delay={0.2}>
                         <p className="text-text-secondary max-w-2xl mx-auto">
-                            A showcase of my best work in design and development
+                            A selection of real projects I've built — AI tools, automation, and full-stack apps
                         </p>
                     </Reveal>
                 </div>
@@ -162,11 +180,13 @@ const ProjectsSection = () => {
                                             transition={{ duration: 0.2 }}
                                             className="absolute inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center gap-4"
                                         >
-                                            <Button size="icon" asChild>
-                                                <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
-                                                    <ExternalLink size={20} />
-                                                </a>
-                                            </Button>
+                                            {project.links.demo && (
+                                                <Button size="icon" asChild>
+                                                    <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                                                        <ExternalLink size={20} />
+                                                    </a>
+                                                </Button>
+                                            )}
                                             <Button size="icon" variant="secondary" asChild>
                                                 <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                                                     <Github size={20} />
@@ -227,12 +247,14 @@ const ProjectsSection = () => {
                 {/* View All Button */}
                 <Reveal width="100%" delay={0.5}>
                     <div className="flex justify-center mt-12">
-                        <Button variant="secondary" className="group">
-                            View All Projects
-                            <ArrowUpRight
-                                size={18}
-                                className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                            />
+                        <Button variant="secondary" className="group" asChild>
+                            <a href="https://github.com/vanductan-NLT?tab=repositories" target="_blank" rel="noopener noreferrer">
+                                View All Projects on GitHub
+                                <ArrowUpRight
+                                    size={18}
+                                    className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                                />
+                            </a>
                         </Button>
                     </div>
                 </Reveal>

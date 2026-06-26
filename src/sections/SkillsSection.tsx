@@ -5,15 +5,12 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import {
     Code,
-    Layout,
     Database,
     Terminal,
-    Figma,
-    GitBranch,
-    Palette,
-    Smartphone,
-    Globe,
-    Zap
+    Bot,
+    Workflow,
+    Server,
+    Globe
 } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import SpotlightCard from "@/components/ui/SpotlightCard";
@@ -96,34 +93,34 @@ const SkillsSection = () => {
     const { t } = useLanguage();
 
     const technicalSkills = [
-        { name: "React / Next.js", icon: <Code size={20} />, level: 90 },
-        { name: "TypeScript", icon: <Terminal size={20} />, level: 85 },
-        { name: "Tailwind CSS", icon: <Layout size={20} />, level: 95 },
-        { name: "Node.js / NestJS", icon: <Database size={20} />, level: 80 },
-        { name: "UI/UX Design", icon: <Figma size={20} />, level: 88 },
-        { name: "Git / CI/CD", icon: <GitBranch size={20} />, level: 82 },
+        { name: "TypeScript", icon: <Terminal size={20} />, level: 90 },
+        { name: "React / Next.js", icon: <Code size={20} />, level: 88 },
+        { name: "Python", icon: <Terminal size={20} />, level: 85 },
+        { name: "Node.js", icon: <Server size={20} />, level: 82 },
+        { name: "Supabase / PostgreSQL", icon: <Database size={20} />, level: 80 },
+        { name: "n8n / Automation", icon: <Workflow size={20} />, level: 85 },
     ];
 
     const expertiseAreas = [
         {
-            icon: <Palette size={28} />,
-            title: "UI Design",
-            description: "Creating beautiful, intuitive interfaces with modern aesthetics and attention to detail."
-        },
-        {
             icon: <Code size={28} />,
-            title: "Frontend Development",
-            description: "Building responsive, performant web applications with React and Next.js."
+            title: "Full-Stack Development",
+            description: "Building end-to-end web apps with React, Next.js, Node.js and TypeScript."
         },
         {
-            icon: <Smartphone size={28} />,
-            title: "Mobile-First",
-            description: "Designing and developing with mobile-first approach for optimal user experience."
+            icon: <Bot size={28} />,
+            title: "AI Integration",
+            description: "Bringing LLMs and AI agents into real products — from coding guardrails to accessibility tools."
         },
         {
-            icon: <Zap size={28} />,
-            title: "Performance",
-            description: "Optimizing applications for speed, accessibility, and SEO best practices."
+            icon: <Workflow size={28} />,
+            title: "Workflow Automation",
+            description: "Turning manual, repetitive work into automated pipelines with n8n and custom scripts."
+        },
+        {
+            icon: <Database size={28} />,
+            title: "Backend Infrastructure",
+            description: "Designing data models and backends on Supabase, PostgreSQL and Node.js."
         },
     ];
 
@@ -156,8 +153,8 @@ const SkillsSection = () => {
                     </Reveal>
                     <Reveal width="100%" delay={0.2}>
                         <p className="text-text-secondary max-w-2xl mx-auto">
-                            Combining design thinking with technical expertise to create
-                            exceptional digital experiences.
+                            Full-stack engineering, AI integration, and automation —
+                            the toolkit I use to ship real products.
                         </p>
                     </Reveal>
                 </div>
