@@ -37,15 +37,13 @@ const AboutSection = () => {
                             <div className="relative">
                                 {/* Main Image Container */}
                                 <div className="relative aspect-[4/5] rounded-[32px] overflow-hidden bg-surface-highlight group">
-                                    {/* Placeholder - Replace with actual image */}
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-center">
-                                            <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center">
-                                                <span className="text-5xl font-heading font-bold text-primary-foreground">T</span>
-                                            </div>
-                                            <p className="text-text-muted text-sm">{t.about.image_placeholder}</p>
-                                        </div>
-                                    </div>
+                                    {/* GitHub avatar */}
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                                    <img
+                                        src="https://avatars.githubusercontent.com/u/195936107?v=4"
+                                        alt="Van Duc Tan"
+                                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    />
 
                                     {/* Hover overlay effect */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
