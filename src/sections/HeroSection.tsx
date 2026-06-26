@@ -100,9 +100,9 @@ const HeroSection = () => {
                     {/* Description */}
                     <Reveal width="100%" delay={0.5}>
                         <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed text-center px-4">
-                            Building digital products, brands, and experiences.
+                            I build internal tools, automate workflows, and integrate AI into real products.
                             <br className="hidden md:block" />
-                            Focused on minimalist design and clean code.
+                            Full-stack with TypeScript, Python, and a focus on clean, shippable code.
                         </p>
                     </Reveal>
 
@@ -137,9 +137,9 @@ const HeroSection = () => {
                                     transition={{ delay: 1, type: "spring" }}
                                     className="block text-3xl md:text-4xl font-heading font-bold text-primary"
                                 >
-                                    5+
+                                    28+
                                 </motion.span>
-                                <span className="text-sm text-text-muted">Years Experience</span>
+                                <span className="text-sm text-text-muted">Public Repos</span>
                             </div>
                             <div className="text-center">
                                 <motion.span
@@ -150,7 +150,7 @@ const HeroSection = () => {
                                 >
                                     20+
                                 </motion.span>
-                                <span className="text-sm text-text-muted">Projects Done</span>
+                                <span className="text-sm text-text-muted">Projects Built</span>
                             </div>
                             <div className="text-center">
                                 <motion.span
@@ -159,9 +159,9 @@ const HeroSection = () => {
                                     transition={{ delay: 1.2, type: "spring" }}
                                     className="block text-3xl md:text-4xl font-heading font-bold text-primary"
                                 >
-                                    100%
+                                    8+
                                 </motion.span>
-                                <span className="text-sm text-text-muted">Satisfaction</span>
+                                <span className="text-sm text-text-muted">Technologies</span>
                             </div>
                         </div>
                     </Reveal>

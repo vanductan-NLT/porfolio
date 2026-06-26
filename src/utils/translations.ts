@@ -10,16 +10,16 @@ export const translations = {
         },
         hero: {
             greeting: "Xin chào, tôi là",
-            role: "Senior UI/UX Designer",
+            role: "Lập trình viên Full-Stack & Kỹ sư Tự động hóa AI",
             cta_primary: "Liên hệ ngay",
             cta_secondary: "Xem dự án",
         },
         about: {
             title: "Về tôi",
-            description: "Tôi là một nhà thiết kế UI/UX đam mê tạo ra những trải nghiệm kỹ thuật số đẹp mắt và tiện dụng. Với nền tảng vững chắc về thiết kế và lập trình, tôi mang đến những giải pháp toàn diện cho khách hàng.",
+            description: "Tôi là một lập trình viên tò mò về công nghệ. Tôi xây dựng các công cụ nội bộ, tự động hóa quy trình làm việc và tích hợp AI vào các sản phẩm thực tế.",
             location: "Việt Nam",
-            years_exp: "Năm kinh nghiệm",
-            projects_done: "Dự án hoàn thành",
+            years_exp: "Repo công khai",
+            projects_done: "Dự án đã xây dựng",
         },
         skills: {
             title: "Kỹ năng nổi bật",
@@ -51,7 +51,7 @@ export const translations = {
             title: "Học vấn",
         },
         certificates: {
-            title: "Chứng chỉ",
+            title: "Thành tích GitHub",
         },
         interests: {
             title: "Sở thích & Điểm mạnh",
@@ -68,16 +68,16 @@ export const translations = {
         },
         hero: {
             greeting: "Hello, I am",
-            role: "Senior UI/UX Designer",
+            role: "Full-Stack Developer & AI Automation Engineer",
             cta_primary: "Contact Me",
             cta_secondary: "View Projects",
         },
         about: {
             title: "About Me",
-            description: "I am a Senior UI/UX Designer passionate about creating beautiful and functional digital experiences. With a strong background in design and development, I deliver comprehensive solutions for clients.",
+            description: "I am a developer who's curious about tech. I build internal tools, automate workflows, and integrate AI into real products.",
             location: "Vietnam",
-            years_exp: "Years Experience",
-            projects_done: "Projects Completed",
+            years_exp: "Public Repos",
+            projects_done: "Projects Built",
         },
         skills: {
             title: "Top Skills",
@@ -109,7 +109,7 @@ export const translations = {
             title: "Education",
         },
         certificates: {
-            title: "Certificates",
+            title: "GitHub Achievements",
         },
         interests: {
             title: "Interests & Strengths",

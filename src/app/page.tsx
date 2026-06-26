@@ -7,7 +7,7 @@ import AboutSection from "@/sections/AboutSection";
 import SkillsSection from "@/sections/SkillsSection";
 import ExperienceSection from "@/sections/ExperienceSection";
 import ProjectsSection from "@/sections/ProjectsSection";
-import ReviewsSection from "@/sections/ReviewsSection";
+// import ReviewsSection from "@/sections/ReviewsSection"; // Re-enable once real testimonials are provided
 import ContactSection from "@/sections/ContactSection";
 import EducationSection from "@/sections/EducationSection";
 import CertificateSection from "@/sections/CertificateSection";
@@ -16,7 +16,7 @@ import QASection from "@/sections/QASection";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import MarqueeCSS from "@/components/ui/Marquee";
-import { Figma, Framer, PenTool, Github, Chrome, Slack } from "lucide-react";
+import { Github } from "lucide-react";
 
 export default function Home() {
     return (
@@ -35,16 +35,15 @@ export default function Home() {
                         {/* Brand Marquee */}
                         <div className="py-10 border-y border-border bg-surface/30 backdrop-blur-sm">
                             <MarqueeCSS speed={40}>
-                                <Figma size={40} className="text-text-secondary opacity-50 hover:opacity-100 transition-opacity" />
-                                <span className="text-2xl font-bold text-text-secondary opacity-50">Adobe</span>
-                                <Framer size={40} className="text-text-secondary opacity-50 hover:opacity-100 transition-opacity" />
-                                <span className="text-2xl font-bold text-text-secondary opacity-50">Webflow</span>
-                                <PenTool size={40} className="text-text-secondary opacity-50 hover:opacity-100 transition-opacity" />
-                                <span className="text-2xl font-bold text-text-secondary opacity-50">Notion</span>
+                                <span className="text-2xl font-bold text-text-secondary opacity-50">TypeScript</span>
+                                <span className="text-2xl font-bold text-text-secondary opacity-50">React</span>
+                                <span className="text-2xl font-bold text-text-secondary opacity-50">Next.js</span>
+                                <span className="text-2xl font-bold text-text-secondary opacity-50">Node.js</span>
+                                <span className="text-2xl font-bold text-text-secondary opacity-50">Python</span>
+                                <span className="text-2xl font-bold text-text-secondary opacity-50">Supabase</span>
+                                <span className="text-2xl font-bold text-text-secondary opacity-50">n8n</span>
                                 <Github size={40} className="text-text-secondary opacity-50 hover:opacity-100 transition-opacity" />
                                 <span className="text-2xl font-bold text-text-secondary opacity-50">Vercel</span>
-                                <Chrome size={40} className="text-text-secondary opacity-50 hover:opacity-100 transition-opacity" />
-                                <Slack size={40} className="text-text-secondary opacity-50 hover:opacity-100 transition-opacity" />
                             </MarqueeCSS>
                         </div>
 
@@ -52,7 +51,7 @@ export default function Home() {
                         <SkillsSection />
                         <ExperienceSection />
                         <ProjectsSection />
-                        <ReviewsSection />
+                        {/* <ReviewsSection /> Re-enable once real testimonials are provided */}
                         <EducationSection />
                         <CertificateSection />
                         <InterestsSection />

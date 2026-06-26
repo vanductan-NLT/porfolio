@@ -27,8 +27,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Van Duc Tan | Senior UI/UX Designer",
-    description: "Portfolio of Van Duc Tan, a Senior UI/UX Designer based in Vietnam.",
+    title: "Van Duc Tan | Full-Stack Developer & AI Automation Engineer",
+    description: "Portfolio of Van Duc Tan — a developer who builds internal tools, automates workflows, and integrates AI into real products. Based in Vietnam.",
 };
 
 export default function RootLayout({

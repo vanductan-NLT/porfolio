@@ -12,6 +12,8 @@ import {
     Linkedin,
     Github,
     Globe,
+    Instagram,
+    Youtube,
     CheckCircle,
     Sparkles,
     ArrowUpRight
@@ -70,16 +72,16 @@ const ContactSection = () => {
         {
             icon: <MapPin size={20} />,
             label: "Location",
-            value: "Ho Chi Minh City, Vietnam",
+            value: "Vietnam",
             href: null,
         },
     ];
 
     const socialLinks = [
         {
-            icon: <Facebook size={20} />,
-            href: "https://www.facebook.com/tan7tntmt",
-            label: "Facebook"
+            icon: <Github size={20} />,
+            href: "https://github.com/vanductan-NLT",
+            label: "GitHub"
         },
         {
             icon: <Linkedin size={20} />,
@@ -87,14 +89,24 @@ const ContactSection = () => {
             label: "LinkedIn"
         },
         {
-            icon: <Github size={20} />,
-            href: "https://github.com/vanductan-NLT",
-            label: "GitHub"
-        },
-        {
             icon: <Globe size={20} />,
             href: "https://vanductan.id.vn/",
             label: "Website"
+        },
+        {
+            icon: <Youtube size={20} />,
+            href: "https://www.youtube.com/@vanductan",
+            label: "YouTube"
+        },
+        {
+            icon: <Facebook size={20} />,
+            href: "https://www.facebook.com/tan7tntmt",
+            label: "Facebook"
+        },
+        {
+            icon: <Instagram size={20} />,
+            href: "https://www.instagram.com/tan7tntmt",
+            label: "Instagram"
         },
     ];
 

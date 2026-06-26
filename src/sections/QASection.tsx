@@ -6,20 +6,20 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
     {
-        question: "Quy trình làm việc của bạn như thế nào?",
-        answer: "Tôi tuân theo quy trình lấy người dùng làm trung tâm: Nghiên cứu > Lên ý tưởng > Thiết kế > Kiểm thử > Bàn giao. Tôi đảm bảo giao tiếp xuyên suốt để sản phẩm cuối cùng đúng với tầm nhìn của bạn.",
+        question: "Công việc chính của bạn là gì?",
+        answer: "Tôi là lập trình viên full-stack, tập trung vào việc xây dựng công cụ nội bộ, tự động hóa quy trình và tích hợp AI vào các sản phẩm thực tế. Hiện tại tôi đang là Team Lead tại NhiLe Team.",
     },
     {
-        question: "Bạn sử dụng công cụ thiết kế nào?",
-        answer: "Tôi thành thạo Figma, Adobe XD, Photoshop và Illustrator. Đối với prototype và motion, tôi sử dụng Principle và After Effects.",
+        question: "Bạn sử dụng công nghệ nào?",
+        answer: "Stack chính của tôi gồm TypeScript, React, Next.js, Node.js và Python. Ở phần backend và dữ liệu tôi dùng Supabase/PostgreSQL, còn việc tự động hóa thì tôi dùng n8n cùng các script tự viết.",
     },
     {
         question: "Bạn có nhận làm freelance không?",
-        answer: "Có, tôi luôn sẵn sàng cho các dự án freelance thú vị. Hãy liên hệ với tôi để thảo luận chi tiết về dự án của bạn.",
+        answer: "Có, tôi luôn sẵn sàng cho các dự án thú vị về web app, tự động hóa hoặc tích hợp AI. Hãy liên hệ với tôi để thảo luận chi tiết về dự án của bạn.",
     },
     {
-        question: "Chi phí cho một dự án là bao nhiêu?",
-        answer: "Chi phí phụ thuộc vào quy mô và độ phức tạp của dự án. Tôi thường báo giá theo dự án hoặc theo giờ tùy thuộc vào yêu cầu cụ thể.",
+        question: "Quy trình làm việc của bạn như thế nào?",
+        answer: "Tôi đi theo hướng thực dụng: tìm hiểu vấn đề > dựng bản chạy được sớm nhất > tự động hóa những phần lặp lại > bàn giao và cải tiến liên tục. Mục tiêu là ra sản phẩm thật, dùng được, chứ không chỉ là demo.",
     },
 ];
 
